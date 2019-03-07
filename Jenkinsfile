@@ -24,10 +24,5 @@ sh "docker push mikodongo/devopsexams:latest"
 stage('Apply changes to the environment') {
 sh "ls -l"
 }
-stage("docker run image")
-{
-sh "docker run --name jenkins-docker -p 2989:2989 -v /var/run/docker.sock:/var/run/docker.sock 
-mikodongo/jenkins-docker"
-}
 
 }
